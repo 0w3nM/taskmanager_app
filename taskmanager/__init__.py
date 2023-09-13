@@ -2,7 +2,7 @@ import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 if os.path.exists("env.py"):
-    import env # noqa
+    import env  # noqa
 
 
 app = Flask(__name__)
@@ -17,4 +17,4 @@ else:
     app.config["SQLALCHEMY_DATABASE_URI"] = uri
 db = SQLAlchemy(app)
 
-from taskmanager import routes # noqa
+from taskmanager import routes  # noqa
